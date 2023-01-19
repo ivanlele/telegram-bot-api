@@ -330,6 +330,11 @@ type Chat struct {
 	//
 	// optional
 	Location *ChatLocation `json:"location,omitempty"`
+	// If non-empty, the list of all active chat usernames;
+	// for private chats, supergroups and channels. Returned only in getChat.
+	//
+	// optional
+	ActiveUsernames []string `json:"active_usernames,omitempty"`
 }
 
 // IsPrivate returns if the Chat is a private conversation.
